@@ -2,7 +2,6 @@ package com.dba.aet.models;
 
 import java.util.List;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,39 +24,30 @@ import lombok.Setter;
 @Entity
 @Table
 public class Cliente {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_cliente")
 	@NotNull
 	private Long id;
-	
+
 	@Column(name = "nome_completo", length = 50)
 	@NotNull
 	private String nome;
-	
+
 	@Column(length = 500)
 	@NotNull
 	private String email;
-	
+
 	@Column(length = 13)
 	@NotNull
 	private String telefone;
-	
+
 	@Column(name = "cpf_cnpj", length = 14, unique = true)
 	@NotNull
 	private String cpfCnpj;
-	
+
 	@OneToMany(mappedBy = "cliente")
 	private List<Documentacao> documentacao;
-	
-	
-	
-	
-	
 
-	
-	
-	
-	
 }

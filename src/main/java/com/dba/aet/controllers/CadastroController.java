@@ -1,9 +1,5 @@
 package com.dba.aet.controllers;
 
-
-
-
-
 import org.apache.tomcat.util.http.parser.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
@@ -30,41 +26,27 @@ import jdk.jfr.ContentType;
 @RestController
 @RequestMapping(value = "/cadastro")
 public class CadastroController {
-	
+
 	@Autowired
 	ClienteService clienteService;
-	
+
 	@Autowired
 	DocumentacaoService documentacaoService;
-	
-	
 
-	
 	@PostMapping("/addCliente")
-	public  Aviso adicionaCliente(@RequestBody ClienteDTO clienteDTO) {
+	public Aviso adicionaCliente(@RequestBody ClienteDTO clienteDTO) {
 		Aviso aviso = clienteService.adicionaCliente(clienteDTO);
 
 		return aviso;
 	}
-	
 
-	
-	
 	@PostMapping("/addDocumentacao")
-	public Aviso adicionaDocumento(@RequestParam String cpfCnpj, @RequestParam String tipo, @RequestParam MultipartFile file) {
-		
+	public Aviso adicionaDocumento(@RequestParam String cpfCnpj, @RequestParam String tipo,
+			@RequestParam MultipartFile file) {
 
-	    
-	    Aviso aviso = documentacaoService.adicionaDocumento(new DocumentacaoDTO(cpfCnpj,tipo,file));
-	    
-	    
+		Aviso aviso = documentacaoService.adicionaDocumento(new DocumentacaoDTO(cpfCnpj, tipo, file));
 
-	    
-	    return aviso;
+		return aviso;
 	}
-	
-	
-	
-	
-	
+
 }
