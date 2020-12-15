@@ -15,8 +15,9 @@ public class ClienteService {
 	ClienteRepository clienteRepository;
 	@Autowired
 	DocumentacaoRepository documentacaoRepository;
-
-	Validar validar = new Validar();
+	
+	@Autowired
+	Validar validar;
 
 	public Aviso adicionaCliente(ClienteDTO clienteDTO) {
 

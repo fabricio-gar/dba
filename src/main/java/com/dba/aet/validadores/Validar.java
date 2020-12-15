@@ -3,9 +3,12 @@ package com.dba.aet.validadores;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.springframework.stereotype.Component;
+
 import com.dba.aet.DTO.ClienteDTO;
 import com.dba.aet.DTO.DocumentacaoDTO;
 
+@Component
 public class Validar {
 	// valida email
 	public boolean isValidEmailAddressRegex(String email) {
