@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dba.aet.DTO.DocumentacaoDTO;
-
 import com.dba.aet.excecoes.Aviso;
 import com.dba.aet.models.Documentacao;
 import com.dba.aet.repository.ClienteRepository;

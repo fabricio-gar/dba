@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import com.dba.aet.DTO.ClienteDTO;
 import com.dba.aet.excecoes.Aviso;
-
 import com.dba.aet.repository.ClienteRepository;
 import com.dba.aet.repository.DocumentacaoRepository;
 import com.dba.aet.validadores.Validar;

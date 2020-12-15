@@ -1,14 +1,7 @@
 package com.dba.aet.validadores;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.nio.file.Files;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.tomcat.util.codec.binary.Base64;
-import org.apache.tomcat.util.http.fileupload.FileUtils;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.dba.aet.DTO.ClienteDTO;
 import com.dba.aet.DTO.DocumentacaoDTO;
